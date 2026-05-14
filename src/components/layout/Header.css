@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--space-xxl) var(--space-xxl) var(--space-xl);
+  border-bottom: 1px solid var(--color-card-border);
+  background: var(--color-canvas);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.header-title {
+  font-family: var(--font-display);
+  font-size: var(--text-section-heading);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-section-heading);
+  color: var(--color-ink);
+}
+
+.header-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-muted);
+  line-height: var(--lh-body);
+}
+
+.header-right {
+  display: flex;
+  gap: var(--space-xxl);
+}
+
+.header-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-xxs);
+}
+
+.header-stat-label {
+  font-family: var(--font-body);
+  font-size: var(--text-micro);
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.header-stat-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-feature-heading);
+  font-weight: 400;
+  color: var(--color-ink);
+  letter-spacing: var(--tracking-card-heading);
+}

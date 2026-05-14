@@ -1,0 +1,58 @@
+.select-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.select-label {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  color: var(--color-body-muted);
+  font-weight: 500;
+}
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-xs);
+  background: var(--color-canvas);
+  transition: border-color var(--transition-fast);
+}
+
+.select-wrapper:focus-within {
+  border-color: var(--color-form-focus);
+  box-shadow: 0 0 0 1px var(--color-form-focus);
+}
+
+.select-wrapper[data-error="true"] {
+  border-color: var(--color-error);
+}
+
+.select-field {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px var(--space-md);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-ink);
+  line-height: var(--lh-body);
+  appearance: none;
+  cursor: pointer;
+}
+
+.select-arrow {
+  position: absolute;
+  right: var(--space-md);
+  pointer-events: none;
+  font-size: 10px;
+  color: var(--color-muted);
+}
+
+.select-error {
+  font-size: var(--text-micro);
+  color: var(--color-error);
+}

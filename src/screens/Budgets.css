@@ -1,0 +1,113 @@
+.budgets-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.budgets-toolbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.budgets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.budget-card {
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.budget-card:hover {
+  transform: translateY(-2px);
+}
+
+.budget-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.budget-card-name {
+  font-family: var(--font-body);
+  font-size: var(--text-feature-heading);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  color: var(--color-ink);
+}
+
+.budget-card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.budget-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.budget-stat-label {
+  font-family: var(--font-body);
+  font-size: var(--text-micro);
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.budget-stat-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-button);
+  letter-spacing: var(--tracking-mono);
+}
+
+.budget-stat-value.negative {
+  color: var(--color-error);
+}
+
+.budget-card-meta {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.budget-period {
+  font-family: var(--font-body);
+  font-size: var(--text-micro);
+  color: var(--color-muted);
+  text-transform: capitalize;
+}
+
+.overspend-band {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.budget-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-button);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+}

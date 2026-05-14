@@ -1,0 +1,25 @@
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.progress-track {
+  flex: 1;
+  background: var(--color-soft-stone);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  border-radius: var(--radius-full);
+  transition: width var(--transition-base);
+  height: 100%;
+}
+
+.progress-label {
+  font-family: var(--font-body);
+  font-size: var(--text-micro);
+  color: var(--color-muted);
+  white-space: nowrap;
+}

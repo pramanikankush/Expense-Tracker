@@ -1,0 +1,94 @@
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: var(--color-canvas);
+  border-right: 1px solid var(--color-card-border);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xl) 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0 var(--space-xl) var(--space-xxl);
+}
+
+.sidebar-logo {
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-body);
+  letter-spacing: var(--tracking-mono);
+}
+
+.sidebar-name {
+  font-family: var(--font-display);
+  font-size: var(--text-feature-heading);
+  font-weight: 400;
+  letter-spacing: var(--tracking-card-heading);
+  color: var(--color-ink);
+}
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+  padding: 0 var(--space-md);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-button);
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.sidebar-link:hover {
+  background: var(--color-soft-stone);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.sidebar-link.active {
+  background: var(--color-soft-stone);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.sidebar-link-icon {
+  width: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.sidebar-footer {
+  padding: var(--space-xl) var(--space-xl) 0;
+  border-top: 1px solid var(--color-card-border);
+  margin: 0 var(--space-md);
+  padding-top: var(--space-lg);
+}
+
+.sidebar-currency {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  letter-spacing: var(--tracking-mono);
+  color: var(--color-muted);
+}

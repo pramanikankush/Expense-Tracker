@@ -1,0 +1,56 @@
+.reports-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.reports-controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reports-controls .select-group {
+  width: 200px;
+}
+
+.report-summary-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.report-summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.report-summary-label {
+  font-family: var(--font-body);
+  font-size: var(--text-micro);
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.report-summary-value {
+  font-family: var(--font-display);
+  font-size: var(--text-card-heading);
+  font-weight: 400;
+  letter-spacing: var(--tracking-card-heading);
+  line-height: var(--lh-tight);
+}
+
+.report-summary-value.positive {
+  color: var(--color-positive);
+}
+
+.report-chart-card {
+  min-height: 360px;
+}
+
+.report-charts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}

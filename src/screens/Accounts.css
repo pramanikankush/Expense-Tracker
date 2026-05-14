@@ -1,0 +1,124 @@
+.accounts-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.accounts-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
+
+.accounts-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-muted);
+}
+
+.accounts-summary strong {
+  font-family: var(--font-mono);
+  color: var(--color-ink);
+  font-weight: 500;
+}
+
+.accounts-summary strong.positive { color: var(--color-positive); }
+.accounts-summary strong.negative { color: var(--color-error); }
+
+.summary-sep {
+  color: var(--color-hairline);
+}
+
+.accounts-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.account-card {
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.account-card:hover {
+  transform: translateY(-2px);
+}
+
+.account-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-card-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.account-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+}
+
+.account-card-name {
+  font-family: var(--font-body);
+  font-size: var(--text-feature-heading);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  color: var(--color-ink);
+  display: block;
+}
+
+.account-card-inst {
+  font-family: var(--font-body);
+  font-size: var(--text-micro);
+  color: var(--color-muted);
+}
+
+.account-card-balance {
+  font-family: var(--font-display);
+  font-size: var(--text-card-heading);
+  font-weight: 400;
+  letter-spacing: var(--tracking-card-heading);
+  line-height: var(--lh-tight);
+}
+
+.account-card-balance.negative {
+  color: var(--color-error);
+}
+
+.account-delete-confirm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-button);
+  color: var(--color-error);
+}
+
+.account-delete-confirm div {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.account-form,
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
