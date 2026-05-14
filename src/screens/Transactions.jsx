@@ -98,7 +98,7 @@ export default function Transactions() {
     });
   };
 
-  const catOptions = categories.map(c => ({ value: c.name, label: `${c.icon || ''} ${c.name}` }));
+  const catOptions = categories.map(c => ({ value: c.name, label: c.name }));
   const accOptions = accounts.map(a => ({ value: a.id, label: `${a.name} (${formatCurrency(a.balance, selectedCurrency)})` }));
   const sortOptions = [
     { value: 'date-desc', label: 'Newest first' },
@@ -118,7 +118,7 @@ export default function Transactions() {
       <div className="transactions-page">
         <div className="tx-toolbar">
           <div className="tx-filters">
-            <Input placeholder="Search transactions..." value={search} onChange={e => setSearch(e.target.value)} icon="🔍" />
+            <Input placeholder="Search transactions..." value={search} onChange={e => setSearch(e.target.value)} />
             <Select options={allCatOptions} value={filterCategory} onChange={e => setFilterCategory(e.target.value)} />
             <Select options={typeOptions} value={filterType} onChange={e => setFilterType(e.target.value)} placeholder="All types" />
             <Select options={sortOptions} value={sortBy} onChange={e => setSortBy(e.target.value)} />

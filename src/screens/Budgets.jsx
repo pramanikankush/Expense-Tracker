@@ -53,7 +53,6 @@ export default function Budgets() {
       period: form.period,
       rollover: form.rollover,
       alerts: form.alerts,
-      spent: 0,
     };
     if (editing) {
       updateBudget({ ...data, id: editing.id });
@@ -66,7 +65,7 @@ export default function Budgets() {
   };
 
   const expenseCats = categories.filter(c => c.type === 'expense');
-  const catOptions = expenseCats.map(c => ({ value: c.name, label: `${c.icon || ''} ${c.name}` }));
+  const catOptions = expenseCats.map(c => ({ value: c.name, label: c.name }));
   const periodOptions = [
     { value: 'monthly', label: 'Monthly' },
     { value: 'weekly', label: 'Weekly' },
@@ -123,7 +122,7 @@ export default function Budgets() {
         {/* Overspend Alert Band */}
         {budgets.some(b => budgetHealth(b, monthTransactions).isOver) && (
           <Card variant="dark-feature" className="overspend-band">
-            <h3 className="card-heading" style={{ color: 'white', marginBottom: 0 }}>⚠ Budget Alerts</h3>
+            <h3 className="card-heading" style={{ color: 'white', marginBottom: 0 }}>Budget Alerts</h3>
             <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 'var(--text-body)' }}>
               {budgets.filter(b => budgetHealth(b, monthTransactions).isOver).map(b => b.category).join(', ')} {budgets.filter(b => budgetHealth(b, monthTransactions).isOver).length > 1 ? 'are' : 'is'} over budget this month
             </p>

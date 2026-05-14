@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer, useEffect, useCallback } from 'react';
-import { sampleCategories, defaultUser, sampleTags } from './sampleData';
+import { SAMPLE_CATEGORIES, SAMPLE_TAGS } from './sampleData';
 import { generateId } from '../utils/format';
 
 const StoreContext = createContext(null);
@@ -12,14 +12,14 @@ function loadState() {
     if (saved) return JSON.parse(saved);
   } catch {}
   return {
-    user: defaultUser,
+    user: { name: '', email: '', baseCurrency: 'USD', timezone: 'UTC', twoFactorEnabled: false, pinEnabled: false, exportFrequency: 'never' },
     accounts: [],
     transactions: [],
-    categories: sampleCategories,
+    categories: SAMPLE_CATEGORIES,
     budgets: [],
     recurring: [],
     goals: [],
-    tags: sampleTags,
+    tags: SAMPLE_TAGS,
     exchangeRates: { USD: 1, EUR: 0.92, GBP: 0.79, INR: 83.12, JPY: 149.50 },
     selectedCurrency: 'USD',
     theme: 'light',

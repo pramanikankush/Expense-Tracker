@@ -8,9 +8,8 @@ import Select from '../components/ui/Select';
 import Badge from '../components/ui/Badge';
 import Header from '../components/layout/Header';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell, AreaChart, Area } from 'recharts';
+import { CHART_COLORS } from '../utils/constants';
 import './Reports.css';
-
-const COLORS = ['#003c33', '#ff7759', '#1863dc', '#75758a', '#9b60aa', '#d4a100', '#b30000', '#071829'];
 
 export default function Reports() {
   const { state } = useStore();
@@ -113,7 +112,7 @@ export default function Reports() {
                 <YAxis dataKey="name" type="category" tick={{ fontSize: 12, fill: '#75758a' }} axisLine={false} tickLine={false} width={100} />
                 <Tooltip contentStyle={{ borderRadius: 8, border: '1px solid #e5e7eb' }} formatter={(v) => formatCurrency(v, selectedCurrency)} />
                 <Bar dataKey="value" radius={[0, 4, 4, 0]}>
-                  {categoryData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
+                  {categoryData.map((_, i) => <Cell key={i} fill={CHART_COLORS[i % CHART_COLORS.length]} />)}
                 </Bar>
               </BarChart>
             </ResponsiveContainer>

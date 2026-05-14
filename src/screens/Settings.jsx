@@ -128,7 +128,7 @@ export default function Settings() {
               <div key={c.id} className="settings-cat-item">
                 <div className="settings-cat-left">
                   <span className="settings-cat-dot" style={{ background: c.color }} />
-                  <span>{c.icon} {c.name}</span>
+                  <span>{c.name}</span>
                 </div>
                 <span className="settings-cat-type">{c.type}</span>
               </div>
@@ -146,7 +146,7 @@ export default function Settings() {
           </div>
         </Card>
 
-        <p className="settings-version">Expense Tracker v1.0.0</p>
+        <p className="settings-version">Expense Tracker v{__APP_VERSION__}</p>
       </div>
     </>
   );

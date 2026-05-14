@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { useStore } from '../../data/store';
 import './Sidebar.css';
 
 const navItems = [
@@ -12,6 +13,7 @@ const navItems = [
 ];
 
 export default function Sidebar() {
+  const { state } = useStore();
   return (
     <aside className="sidebar">
       <div className="sidebar-brand">
@@ -32,7 +34,7 @@ export default function Sidebar() {
         ))}
       </nav>
       <div className="sidebar-footer">
-        <div className="sidebar-currency">USD</div>
+        <div className="sidebar-currency">{state.selectedCurrency}</div>
       </div>
     </aside>
   );

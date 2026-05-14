@@ -64,6 +64,12 @@ img {
   outline-offset: 2px;
 }
 
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
 ::selection {
   background: var(--color-pale-blue);
   color: var(--color-ink);

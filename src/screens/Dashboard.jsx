@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useStore } from '../data/store';
 import { formatCurrency, formatDateShort } from '../utils/format';
 import { totalByCategory, totalByMonth, netWorth, budgetHealth } from '../utils/calculations';
+import { CHART_COLORS } from '../utils/constants';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import Badge from '../components/ui/Badge';
@@ -51,8 +52,6 @@ export default function Dashboard() {
     () => transactions.filter(t => t.type === 'expense' && t.date.startsWith(currentMonth)),
     [transactions, currentMonth]
   );
-
-  const COLORS = ['#003c33', '#ff7759', '#1863dc', '#75758a', '#9b60aa', '#d4a100', '#b30000', '#071829'];
 
   return (
     <>
@@ -103,7 +102,7 @@ export default function Dashboard() {
               <PieChart>
                 <Pie data={categoryData.slice(0, 6)} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={90} label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}>
                   {categoryData.slice(0, 6).map((_, i) => (
-                    <Cell key={i} fill={COLORS[i % COLORS.length]} />
+                    <Cell key={i} fill={CHART_COLORS[i % CHART_COLORS.length]} />
                   ))}
                 </Pie>
                 <Tooltip formatter={(v) => formatCurrency(v, selectedCurrency)} />
